@@ -1,0 +1,315 @@
+
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Domů | Převodník soustav</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="favicon.ico">
+</head>
+<body>
+
+<header>
+    <h1>Převodník číselných soustav</h1>
+
+    <nav>
+        <a href="index.html">Domů</a>
+        <a href="prevod.html">Převodník</a>
+        <a href="info.html">Informace</a>
+    </nav>
+</header>
+
+<main>
+    <section class="box">
+        <h2>Vítejte</h2>
+
+        <p>
+            Tato webová aplikace převádí čísla mezi soustavami:
+        </p>
+
+        <ul>
+            <li>Dvojková (2)</li>
+            <li>Osmičková (8)</li>
+            <li>Desítková (10)</li>
+            <li>Šestnáctková (16)</li>
+        </ul>
+
+        <p>
+            Aplikace byla vytvořena v HTML, CSS a JavaScriptu.
+        </p>
+    </section>
+</main>
+
+<footer>
+    <p>Projekt do JavaScriptu | 2. ročník SŠ</p>
+</footer>
+
+</body>
+</html>
+
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Převodník | Převodník soustav</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="favicon.ico">
+</head>
+<body>
+
+<header>
+    <h1>Převodník číselných soustav</h1>
+
+    <nav>
+        <a href="index.html">Domů</a>
+        <a href="prevod.html">Převodník</a>
+        <a href="info.html">Informace</a>
+    </nav>
+</header>
+
+<main>
+    <section class="box">
+
+        <h2>Převod čísla</h2>
+
+        <form id="converterForm">
+
+            <label for="number">Zadej číslo:</label>
+            <input type="text" id="number" required>
+
+            <label for="fromBase">Z jaké soustavy:</label>
+            <select id="fromBase">
+                <option value="2">Binární (2)</option>
+                <option value="8">Osmičková (8)</option>
+                <option value="10">Desítková (10)</option>
+                <option value="16">Hexadecimální (16)</option>
+            </select>
+
+            <label for="toBase">Do jaké soustavy:</label>
+            <select id="toBase">
+                <option value="2">Binární (2)</option>
+                <option value="8">Osmičková (8)</option>
+                <option value="10">Desítková (10)</option>
+                <option value="16">Hexadecimální (16)</option>
+            </select>
+
+            <button type="submit">Převést</button>
+
+        </form>
+
+        <div id="result"></div>
+
+    </section>
+</main>
+
+<footer>
+    <p>Projekt do JavaScriptu | 2. ročník SŠ</p>
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>
+
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Informace | Převodník soustav</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="favicon.ico">
+</head>
+<body>
+
+<header>
+    <h1>Převodník číselných soustav</h1>
+
+    <nav>
+        <a href="index.html">Domů</a>
+        <a href="prevod.html">Převodník</a>
+        <a href="info.html">Informace</a>
+    </nav>
+</header>
+
+<main>
+    <section class="box">
+
+        <h2>Informace o aplikaci</h2>
+
+        <p>
+            Tato aplikace slouží k převodu čísel mezi různými číselnými soustavami.
+        </p>
+
+        <h3>Použité technologie:</h3>
+
+        <ul>
+            <li>HTML5</li>
+            <li>CSS3</li>
+            <li>JavaScript</li>
+        </ul>
+
+        <h3>Funkce aplikace:</h3>
+
+        <ul>
+            <li>Kontrola správnosti vstupu</li>
+            <li>Ošetření chyb pomocí try/catch</li>
+            <li>Převod mezi soustavami 2, 8, 10, 16</li>
+            <li>Jednoduché uživatelské rozhraní</li>
+        </ul>
+
+        <p id="time"></p>
+
+    </section>
+</main>
+
+<footer>
+    <p>Projekt do JavaScriptu | 2. ročník SŠ</p>
+</footer>
+
+<script>
+    const dnes = new Date();
+    document.getElementById("time").innerHTML =
+        "Aktuální datum: " + dnes.toLocaleString();
+</script>
+
+</body>
+</html>
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background-color: #f4f4f4;
+}
+
+header {
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+nav {
+    margin-top: 10px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: yellow;
+}
+
+main {
+    padding: 30px;
+}
+
+.box {
+    background-color: white;
+    padding: 25px;
+    border-radius: 10px;
+    max-width: 700px;
+    margin: auto;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+}
+
+label {
+    display: block;
+    margin-top: 15px;
+}
+
+input,
+select,
+button {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    box-sizing: border-box;
+}
+
+button {
+    background-color: #333;
+    color: white;
+    border: none;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+button:hover {
+    background-color: #555;
+}
+
+#result {
+    margin-top: 20px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    margin-top: 40px;
+}
+
+const form = document.getElementById("converterForm");
+const result = document.getElementById("result");
+
+form.addEventListener("submit", function(event) {
+
+    event.preventDefault();
+
+    try {
+
+        let number = document.getElementById("number").value.trim();
+
+        const fromBase = parseInt(document.getElementById("fromBase").value);
+        const toBase = parseInt(document.getElementById("toBase").value);
+
+        if (number === "") {
+            throw "Musíš zadat číslo.";
+        }
+
+        number = number.toUpperCase();
+
+        const allowedChars = {
+            2: /^[01]+$/,
+            8: /^[0-7]+$/,
+            10: /^[0-9]+$/,
+            16: /^[0-9A-F]+$/
+        };
+
+        if (!allowedChars[fromBase].test(number)) {
+            throw "Číslo neodpovídá zvolené soustavě.";
+        }
+
+        const decimal = parseInt(number, fromBase);
+
+        if (isNaN(decimal)) {
+            throw "Neplatné číslo.";
+        }
+
+        const converted = decimal.toString(toBase).toUpperCase();
+
+        result.innerHTML =
+            "Výsledek: " + converted;
+
+    }
+    catch(error) {
+
+        result.innerHTML =
+            "Chyba: " + error;
+    }
+    finally {
+
+        console.log("Převod dokončen.");
+    }
+});
+
